@@ -5,9 +5,8 @@ Description
 -----------
 
 This document is intended to supplement the document README.md at the
-root of the distribution of the LiteSpeed QUIC (LSQUIC) Client Library.
-This document is intended to help build the library in a Windows
-environment.  
+root of the distribution of the LiteSpeed QUIC (LSQUIC) Client Library
+to build the library and programs in a Windows environment.  
 
 The addition of Windows support to the LSQUIC Client was a contribution 
 from the user community and this document was based on our experiences
@@ -38,15 +37,16 @@ Some open source code required to be installed to build the code include:
      and build some open source projects.  Before doing that, an environment 
      variable must be defined which specifies how the package should be built.
      The easiest way would be to add it into the system environment variables
-     in the control panel.  This example assumes 64-bit static libraries will
-     be built, which is what is generally recommended:
+     in the System applet of the Windows Control Panel.  This example assumes 
+     64-bit static libraries will be built, which is what is generally 
+     recommended:
         ```
         VCPKG_DEFAULT_TRIPLET=x64-windows-static
         ```
    - From the command line, once the variable above has been defined, install
      both *zlib* and *libevent*.  Note that libevent may also automatically 
      install *openssl*.  If it does not, it may need to be manually specified 
-     at a later time to properly link the lsquic-client executables.
+     to properly link the lsquic-client executables.
         ```
         vcpkg install zlib
         vcpkg install libevent
